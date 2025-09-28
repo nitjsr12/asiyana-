@@ -3,11 +3,19 @@ import { PropertyGallery } from '@/components/PropertyGallery';
 import { PropertyFeatures } from '@/components/PropertyFeatures';
 import { ContactAgent } from '@/components/ContactAgent';
 import { SimilarProperties } from '@/components/SimilarProperties';
+import { properties } from '@/lib/data';
 
 interface PropertyPageProps {
   params: {
     id: string;
   };
+}
+
+// Generate static params for all property IDs
+export async function generateStaticParams() {
+  return properties.map((property) => ({
+    id: property.id,
+  }));
 }
 
 export default function PropertyPage({ params }: PropertyPageProps) {
