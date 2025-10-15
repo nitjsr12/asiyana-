@@ -60,6 +60,37 @@ const config: Config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+    // DENZ REALTORS brand colors from design
+    brand: {
+      // Dark Primary - from top header
+      dark: '#1a1a1a',
+      'dark-light': '#2d2d2d',
+      'dark-lighter': '#404040',
+      
+      // Accent Gold - from logo, search button, active states
+      gold: '#f59e0b',
+      'gold-light': '#fbbf24',
+      'gold-dark': '#d97706',
+      
+      // Light Background Cream - from main content section
+      cream: '#fef7ed',
+      'cream-dark': '#fed7aa',
+      'cream-light': '#fffbf5',
+      
+      // Hero Sky Blue Gradient
+      'sky-light': '#a0c4d8',
+      'sky-dark': '#6e9bbd',
+      
+      // Text Colors
+      'text-primary': '#333333',
+      'text-secondary': '#64748b',
+      'text-muted': '#94a3b8',
+      
+      // White and Grays
+      white: '#ffffff',
+      'gray-50': '#f9fafb',
+      'gray-100': '#f3f4f6',
+    },
       },
       keyframes: {
         'accordion-down': {

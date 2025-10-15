@@ -28,28 +28,28 @@ export function Hero() {
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
           Find Your Perfect
-          <span className="text-blue-400 block">Dream Home</span>
+          <span className="text-brand-gold block">Dream Home</span>
         </h1>
         <p className="text-xl md:text-2xl mb-12 text-gray-200 leading-relaxed">
           Discover luxury properties and exclusive listings in the most desirable neighborhoods
         </p>
 
         {/* Search Form */}
-        <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl max-w-4xl mx-auto">
+        <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-2xl p-6 shadow-premium max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="relative">
-              <MapPin className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
+              <MapPin className="absolute left-3 top-3 h-5 w-5 text-brand-text-secondary" />
               <Input
                 placeholder="Location"
-                className="pl-10 h-12 text-gray-900"
+                className="pl-10 h-12 text-brand-text-primary border-brand-gray-100 focus:border-brand-gold transition-premium"
                 value={searchData.location}
                 onChange={(e) => setSearchData({ ...searchData, location: e.target.value })}
               />
             </div>
             
             <Select value={searchData.propertyType} onValueChange={(value) => setSearchData({ ...searchData, propertyType: value })}>
-              <SelectTrigger className="h-12 text-gray-900">
-                <Home className="h-5 w-5 text-gray-400 mr-2" />
+              <SelectTrigger className="h-12 text-brand-text-primary border-brand-gray-100 focus:border-brand-gold transition-premium">
+                <Home className="h-5 w-5 text-brand-text-secondary mr-2" />
                 <SelectValue placeholder="Property Type" />
               </SelectTrigger>
               <SelectContent>
@@ -61,8 +61,8 @@ export function Hero() {
             </Select>
 
             <Select value={searchData.priceRange} onValueChange={(value) => setSearchData({ ...searchData, priceRange: value })}>
-              <SelectTrigger className="h-12 text-gray-900">
-                <DollarSign className="h-5 w-5 text-gray-400 mr-2" />
+              <SelectTrigger className="h-12 text-brand-text-primary border-brand-gray-100 focus:border-brand-gold transition-premium">
+                <DollarSign className="h-5 w-5 text-brand-text-secondary mr-2" />
                 <SelectValue placeholder="Price Range" />
               </SelectTrigger>
               <SelectContent>
@@ -73,7 +73,7 @@ export function Hero() {
               </SelectContent>
             </Select>
 
-            <Button className="h-12 bg-blue-600 hover:bg-blue-700 text-white font-semibold">
+            <Button className="h-12 gradient-gold hover:opacity-90 text-white font-semibold shadow-gold transition-premium">
               <Search className="h-5 w-5 mr-2" />
               Search Properties
             </Button>
@@ -83,15 +83,15 @@ export function Hero() {
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           <div className="text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">1500+</div>
+            <div className="text-4xl font-bold text-brand-gold mb-2">1500+</div>
             <div className="text-gray-200">Properties Sold</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">98%</div>
+            <div className="text-4xl font-bold text-brand-gold mb-2">98%</div>
             <div className="text-gray-200">Client Satisfaction</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-blue-400 mb-2">15+</div>
+            <div className="text-4xl font-bold text-brand-gold mb-2">15+</div>
             <div className="text-gray-200">Years Experience</div>
           </div>
         </div>

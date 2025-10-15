@@ -23,6 +23,26 @@ export interface Property {
     email: string;
     image: string;
   };
+  // Additional project details
+  projectArea?: string;
+  launchDate?: string;
+  configurations?: string;
+  sizeRange?: string;
+  avgPricePerSqft?: number;
+  projectSize?: string;
+  possessionDate?: string;
+  reraId?: string;
+  // Floor plan details
+  floorPlans?: {
+    type: string;
+    area: number;
+    price: number;
+    rooms: {
+      name: string;
+      dimensions: string;
+      position: { x: number; y: number; width: number; height: number };
+    }[];
+  }[];
 }
 
 export const properties: Property[] = [
@@ -52,7 +72,107 @@ export const properties: Property[] = [
       phone: '+91 98450 12345',
       email: 'priya@aashiyanahabitat.com',
       image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400'
-    }
+    },
+    projectArea: '63.33 Acres (56% open)',
+    launchDate: 'Jan, 2025',
+    configurations: '1, 2, 2.5, 3, 3.5, 4 BHK Apartments',
+    sizeRange: '750 - 2950 sq.ft.',
+    avgPricePerSqft: 12000,
+    projectSize: '6 Buildings - 796 units',
+    possessionDate: 'Jan, 2030',
+    reraId: 'PRM/KA/RERA/1251/30/PR/220815/000234',
+    floorPlans: [
+      {
+        type: '1 BHK Apartment',
+        area: 750,
+        price: 9000000,
+        rooms: [
+          { name: 'UTILITY', dimensions: '8\'0" X 4\'8"', position: { x: 5, y: 5, width: 8, height: 4.8 } },
+          { name: 'KITCHEN', dimensions: '8\'0" X 8\'6"', position: { x: 5, y: 10, width: 8, height: 8.6 } },
+          { name: 'DINING', dimensions: '12\'4" X 8\'3"', position: { x: 13, y: 10, width: 12.4, height: 8.3 } },
+          { name: 'LIVING', dimensions: '12\'4" X 15\'3"', position: { x: 13, y: 18.5, width: 12.4, height: 15.3 } },
+          { name: 'BALCONY', dimensions: '3\'7" X 7\'3"', position: { x: 25.5, y: 20, width: 3.7, height: 7.3 } },
+          { name: 'BEDROOM', dimensions: '10\'0" X 11\'0"', position: { x: 5, y: 25, width: 10, height: 11 } },
+          { name: 'TOILET', dimensions: '5\'0" X 8\'0"', position: { x: 15, y: 25, width: 5, height: 8 } },
+          { name: 'BEDROOM', dimensions: '13\'9" X 12\'0"', position: { x: 20, y: 25, width: 13.9, height: 12 } },
+          { name: 'WALK-IN-WARDROBE', dimensions: '5\'7" X 7\'6"', position: { x: 33.9, y: 25, width: 5.7, height: 7.6 } },
+          { name: 'TOILET', dimensions: '5\'0" X 8\'0"', position: { x: 33.9, y: 32.6, width: 5, height: 8 } },
+          { name: 'FOYER', dimensions: '5\'5" X 8\'9"', position: { x: 5, y: 35, width: 5.5, height: 8.9 } }
+        ]
+      },
+      {
+        type: '2 BHK Apartment',
+        area: 1200,
+        price: 14400000,
+        rooms: [
+          { name: 'LIVING', dimensions: '15\'0" X 12\'0"', position: { x: 5, y: 5, width: 15, height: 12 } },
+          { name: 'DINING', dimensions: '10\'0" X 8\'0"', position: { x: 20, y: 5, width: 10, height: 8 } },
+          { name: 'KITCHEN', dimensions: '8\'0" X 10\'0"', position: { x: 20, y: 13, width: 8, height: 10 } },
+          { name: 'BEDROOM 1', dimensions: '12\'0" X 10\'0"', position: { x: 5, y: 17, width: 12, height: 10 } },
+          { name: 'BEDROOM 2', dimensions: '14\'0" X 12\'0"', position: { x: 17, y: 17, width: 14, height: 12 } },
+          { name: 'BALCONY', dimensions: '8\'0" X 5\'0"', position: { x: 31, y: 17, width: 8, height: 5 } }
+        ]
+      },
+      {
+        type: '2.5 BHK Apartment',
+        area: 1450,
+        price: 16500000,
+        rooms: [
+          { name: 'LIVING', dimensions: '16\'0" X 13\'0"', position: { x: 5, y: 5, width: 16, height: 13 } },
+          { name: 'DINING', dimensions: '11\'0" X 9\'0"', position: { x: 21, y: 5, width: 11, height: 9 } },
+          { name: 'KITCHEN', dimensions: '9\'0" X 11\'0"', position: { x: 21, y: 14, width: 9, height: 11 } },
+          { name: 'BEDROOM 1', dimensions: '13\'0" X 11\'0"', position: { x: 5, y: 18, width: 13, height: 11 } },
+          { name: 'BEDROOM 2', dimensions: '13\'0" X 11\'0"', position: { x: 18, y: 18, width: 13, height: 11 } },
+          { name: 'STUDY', dimensions: '8\'0" X 8\'0"', position: { x: 30, y: 25, width: 8, height: 8 } },
+          { name: 'BALCONY', dimensions: '9\'0" X 6\'0"', position: { x: 31, y: 18, width: 9, height: 6 } }
+        ]
+      },
+      {
+        type: '3 BHK Apartment',
+        area: 1650,
+        price: 18700000,
+        rooms: [
+          { name: 'LIVING', dimensions: '18\'0" X 14\'0"', position: { x: 5, y: 5, width: 18, height: 14 } },
+          { name: 'DINING', dimensions: '12\'0" X 10\'0"', position: { x: 23, y: 5, width: 12, height: 10 } },
+          { name: 'KITCHEN', dimensions: '10\'0" X 12\'0"', position: { x: 23, y: 15, width: 10, height: 12 } },
+          { name: 'BEDROOM 1', dimensions: '14\'0" X 12\'0"', position: { x: 5, y: 19, width: 14, height: 12 } },
+          { name: 'BEDROOM 2', dimensions: '12\'0" X 10\'0"', position: { x: 19, y: 19, width: 12, height: 10 } },
+          { name: 'BEDROOM 3', dimensions: '16\'0" X 14\'0"', position: { x: 31, y: 19, width: 16, height: 14 } },
+          { name: 'BALCONY', dimensions: '10\'0" X 6\'0"', position: { x: 47, y: 19, width: 10, height: 6 } }
+        ]
+      },
+      {
+        type: '3.5 BHK Apartment',
+        area: 2100,
+        price: 24000000,
+        rooms: [
+          { name: 'LIVING', dimensions: '20\'0" X 15\'0"', position: { x: 5, y: 5, width: 20, height: 15 } },
+          { name: 'DINING', dimensions: '14\'0" X 11\'0"', position: { x: 25, y: 5, width: 14, height: 11 } },
+          { name: 'KITCHEN', dimensions: '12\'0" X 13\'0"', position: { x: 25, y: 16, width: 12, height: 13 } },
+          { name: 'BEDROOM 1', dimensions: '15\'0" X 13\'0"', position: { x: 5, y: 20, width: 15, height: 13 } },
+          { name: 'BEDROOM 2', dimensions: '14\'0" X 12\'0"', position: { x: 20, y: 20, width: 14, height: 12 } },
+          { name: 'BEDROOM 3', dimensions: '18\'0" X 15\'0"', position: { x: 34, y: 20, width: 18, height: 15 } },
+          { name: 'STUDY', dimensions: '10\'0" X 9\'0"', position: { x: 52, y: 20, width: 10, height: 9 } },
+          { name: 'BALCONY', dimensions: '12\'0" X 7\'0"', position: { x: 52, y: 29, width: 12, height: 7 } }
+        ]
+      },
+      {
+        type: '4 BHK Apartment',
+        area: 2750,
+        price: 29500000,
+        rooms: [
+          { name: 'LIVING', dimensions: '22\'0" X 16\'0"', position: { x: 5, y: 5, width: 22, height: 16 } },
+          { name: 'DINING', dimensions: '16\'0" X 12\'0"', position: { x: 27, y: 5, width: 16, height: 12 } },
+          { name: 'KITCHEN', dimensions: '14\'0" X 14\'0"', position: { x: 27, y: 17, width: 14, height: 14 } },
+          { name: 'BEDROOM 1', dimensions: '16\'0" X 14\'0"', position: { x: 5, y: 21, width: 16, height: 14 } },
+          { name: 'BEDROOM 2', dimensions: '15\'0" X 13\'0"', position: { x: 21, y: 21, width: 15, height: 13 } },
+          { name: 'BEDROOM 3', dimensions: '17\'0" X 15\'0"', position: { x: 36, y: 21, width: 17, height: 15 } },
+          { name: 'BEDROOM 4', dimensions: '19\'0" X 16\'0"', position: { x: 53, y: 21, width: 19, height: 16 } },
+          { name: 'STUDY', dimensions: '12\'0" X 10\'0"', position: { x: 72, y: 21, width: 12, height: 10 } },
+          { name: 'BALCONY', dimensions: '15\'0" X 8\'0"', position: { x: 72, y: 31, width: 15, height: 8 } }
+        ]
+      }
+    ]
   },
   {
     id: '2',

@@ -17,7 +17,7 @@ export default function Contact() {
           </div>
           <div className="space-y-8">
             <ContactInfo />
-            <LocationMap />
+            <LocationMap propertyId="contact" />
           </div>
         </div>
       </div>
