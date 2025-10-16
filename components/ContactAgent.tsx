@@ -25,6 +25,20 @@ export function ContactAgent({ propertyId }: ContactAgentProps) {
   // Get agent from the specific property or default to first property's agent
   const property = properties.find(p => p.id === propertyId) || properties[0];
   const agent = property.agent;
+  
+  // Return early if no agent is found
+  if (!agent) {
+    return (
+      <div className="space-y-6">
+        <Card className="shadow-lg">
+          <CardHeader className="text-center">
+            <CardTitle className="text-xl text-slate-800">Agent Information Not Available</CardTitle>
+            <p className="text-slate-600">Please contact us directly for assistance.</p>
+          </CardHeader>
+        </Card>
+      </div>
+    );
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

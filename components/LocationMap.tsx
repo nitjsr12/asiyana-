@@ -41,12 +41,14 @@ export function LocationMap({ propertyId }: LocationMapProps) {
             <div className="text-sm text-gray-600">Interactive Map Coming Soon</div>
           </div>
         </div>
-        <div className="absolute top-4 right-4 bg-white rounded-lg px-3 py-2 shadow-lg">
-          <div className="text-xs text-gray-600">Coordinates</div>
-          <div className="text-sm font-medium text-slate-800">
-            {property.coordinates.lat.toFixed(4)}, {property.coordinates.lng.toFixed(4)}
+        {property.coordinates && (
+          <div className="absolute top-4 right-4 bg-white rounded-lg px-3 py-2 shadow-lg">
+            <div className="text-xs text-gray-600">Coordinates</div>
+            <div className="text-sm font-medium text-slate-800">
+              {property.coordinates.lat.toFixed(4)}, {property.coordinates.lng.toFixed(4)}
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       {/* Location Highlights */}

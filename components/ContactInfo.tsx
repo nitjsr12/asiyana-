@@ -12,7 +12,7 @@ export function ContactInfo() {
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@eliterealty.com', 'support@eliterealty.com'],
+      details: ['aashiyanahabitat@gmail.com', 'aashiyanahabitat@gmail.com'],
       description: 'Send us your inquiries anytime'
     },
     {

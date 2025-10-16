@@ -80,10 +80,10 @@ export function PropertyMap() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           
-          {properties.map((property) => (
+          {properties.filter(property => property.coordinates).map((property) => (
             <Marker
               key={property.id}
-              position={[property.coordinates.lat, property.coordinates.lng]}
+              position={[property.coordinates!.lat, property.coordinates!.lng]}
             >
               <Popup className="custom-popup">
                 <div className="p-2 min-w-[200px]">

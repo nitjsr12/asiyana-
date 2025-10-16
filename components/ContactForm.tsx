@@ -70,7 +70,7 @@ export function ContactForm() {
                 required
                 value={formData.email}
                 onChange={(e) => handleChange('email', e.target.value)}
-                placeholder="john@example.com"
+                placeholder="aashiyanahabitat@gmail.com"
               />
             </div>
           </div>
