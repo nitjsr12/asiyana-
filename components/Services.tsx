@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Chrome as Home, TrendingUp, Key, Users } from 'lucide-react';
+import { Chrome as Home, TrendingUp, Users } from 'lucide-react';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -24,11 +24,6 @@ export function Services() {
       icon: TrendingUp,
       title: 'Sell a Home',
       description: 'Maximize your property value with our proven marketing strategies and market expertise.'
-    },
-    {
-      icon: Key,
-      title: 'Rent a Property',
-      description: 'Discover premium rental properties that match your lifestyle and budget requirements.'
     },
     {
       icon: Users,

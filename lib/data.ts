@@ -39,6 +39,11 @@ export interface Property {
       position: { x: number; y: number; width: number; height: number };
     }[];
   }[];
+  brochure?: {
+    pdf?: string;
+    doc?: string;
+    title?: string;
+  };
 }
 
 export interface TeamMember {
@@ -121,9 +126,15 @@ export const properties: Property[] = [
       }
     ],
     images: [
-      'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'
-    ]
+      '/SATTVA HAMLET/1BHK.jpg',
+      '/SATTVA HAMLET/2-bhk.jpg',
+      '/SATTVA HAMLET/3-bhk.jpg',
+      '/SATTVA HAMLET/4-bhk.jpg'
+    ],
+    brochure: {
+      pdf: '/SATTVA HAMLET/HAMLET_BROCHURE.pdf',
+      title: 'SATTVA HAMLET Brochure'
+    }
   },
   {
     id: '2',
@@ -155,9 +166,16 @@ export const properties: Property[] = [
     possessionDate: 'Mar, 2027',
     reraId: 'PRM/KA/RERA/1251/30/PR/220815/000235',
     images: [
-      'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'
-    ]
+      '/SATTVA SIMPLICITY/Simplicity Masterplan.webp',
+      '/SATTVA SIMPLICITY/Simplicity Masterplan.webp',
+      '/SATTVA SIMPLICITY/Simplicity Masterplan.webp',
+      '/SATTVA SIMPLICITY/Simplicity Masterplan.webp'
+    ],
+    brochure: {
+      pdf: '/SATTVA SIMPLICITY/Simplicity_big_brochure_30x30_24725.pdf',
+      doc: '/SATTVA SIMPLICITY/simplicity.docx',
+      title: 'SATTVA SIMPLICITY Brochure'
+    }
   },
   {
     id: '3',
@@ -189,9 +207,13 @@ export const properties: Property[] = [
     possessionDate: 'Feb, 2027',
     reraId: 'PRM/KA/RERA/1251/30/PR/220815/000236',
     images: [
-      'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'
-    ]
+      '/SATTVA HAMLET/1BHK.jpg'
+    ],
+    brochure: {
+      pdf: '/SATTVA PARK CUBIX II/CUBIX.pdf',
+      doc: '/SATTVA PARK CUBIX II/CUBIX.docx',
+      title: 'SATTVA PARK CUBIX II Brochure'
+    }
   },
   {
     id: '4',
@@ -223,9 +245,12 @@ export const properties: Property[] = [
     possessionDate: 'Apr, 2027',
     reraId: 'PRM/KA/RERA/1251/30/PR/220815/000237',
     images: [
-      'https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      'https://images.pexels.com/photos/1571467/pexels-photo-1571467.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'
-    ]
+      '/SATTVA HAMLET/2-bhk.jpg'
+    ],
+    brochure: {
+      pdf: '/SATTVA SONGBIRD/SONGBIRD_BROCHURE.pdf',
+      title: 'SATTVA SONGBIRD Brochure'
+    }
   },
   {
     id: '5',
@@ -257,9 +282,16 @@ export const properties: Property[] = [
     possessionDate: 'May, 2027',
     reraId: 'PRM/KA/RERA/1251/30/PR/220815/000238',
     images: [
-      'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'
-    ]
+      '/SATTVA LUMINA/MasterPlan-1.jpg',
+      '/SATTVA LUMINA/WhatsApp Image 2025-09-28 at 15.35.16.jpeg',
+      '/SATTVA LUMINA/Floor plan - 2bhk & 1bhk.jpg',
+      '/SATTVA LUMINA/floorplan 3bhk 3t 2t.jpg'
+    ],
+    brochure: {
+      pdf: '/SATTVA LUMINA/lumina brochure.pdf',
+      doc: '/SATTVA LUMINA/Sattva Lumina.docx',
+      title: 'SATTVA LUMINA Brochure'
+    }
   }
 ];
 

@@ -50,7 +50,6 @@ export function Footer() {
             <div className="space-y-2">
               <div className="text-brand-text-secondary">Buying</div>
               <div className="text-brand-text-secondary">Selling</div>
-              <div className="text-brand-text-secondary">Renting</div>
               <div className="text-brand-text-secondary">Property Management</div>
             </div>
           </div>
@@ -61,11 +60,11 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-brand-text-secondary" />
-                <span className="text-brand-text-secondary">Brigade Road, MG Road, Bangalore 560001</span>
+                <span className="text-brand-text-secondary">#90/17-1, Ground Floor, 1st Cross, Vittal Nagar, Chamarajpet, Bengaluru, Karnataka-560026</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-brand-text-secondary" />
-                <span className="text-brand-text-secondary">+91 80 4567 8900</span>
+                <span className="text-brand-text-secondary">+91 88925 34459</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-brand-text-secondary" />

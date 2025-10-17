@@ -98,7 +98,6 @@ export function ContactForm() {
               <SelectContent>
                 <SelectItem value="buying">I want to buy a property</SelectItem>
                 <SelectItem value="selling">I want to sell my property</SelectItem>
-                <SelectItem value="renting">I'm looking for a rental</SelectItem>
                 <SelectItem value="investment">Investment opportunities</SelectItem>
                 <SelectItem value="other">Other inquiry</SelectItem>
               </SelectContent>

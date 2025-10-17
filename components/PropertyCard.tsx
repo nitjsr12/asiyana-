@@ -6,6 +6,7 @@ import { Property } from '@/lib/data';
 import { Bed, Bath, Square, MapPin, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { DownloadBrochureSimple } from '@/components/DownloadBrochure';
 
 interface PropertyCardProps {
   property: Property;
@@ -82,11 +83,18 @@ export function PropertyCard({ property }: PropertyCardProps) {
           </div>
         </div>
 
-        <Link href={`/properties/${property.id}`}>
-          <Button className="w-full gradient-gold hover:opacity-90 text-white shadow-gold transition-premium">
-            View Details
-          </Button>
-        </Link>
+        <div className="space-y-2">
+          <Link href={`/properties/${property.id}`}>
+            <Button className="w-full gradient-gold hover:opacity-90 text-white shadow-gold transition-premium">
+              View Details
+            </Button>
+          </Link>
+          <DownloadBrochureSimple 
+            brochure={property.brochure} 
+            propertyTitle={property.title}
+            className="w-full"
+          />
+        </div>
       </div>
     </div>
   );

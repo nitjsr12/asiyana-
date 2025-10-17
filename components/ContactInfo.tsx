@@ -6,7 +6,7 @@ export function ContactInfo() {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+91 80 4567 8900', '+91 98450 12345'],
+      details: ['+91 88925 34459', '+91 98450 12345'],
       description: 'Call us for immediate assistance'
     },
     {
@@ -18,7 +18,7 @@ export function ContactInfo() {
     {
       icon: MapPin,
       title: 'Office',
-      details: ['Brigade Road, MG Road', 'Bangalore, Karnataka 560001'],
+      details: ['#90/17-1, Ground Floor, 1st Cross', 'Vittal Nagar, Chamarajpet, Bengaluru, Karnataka-560026'],
       description: 'Visit our office for consultations'
     },
     {

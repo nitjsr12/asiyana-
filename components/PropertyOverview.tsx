@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { DownloadBrochure } from '@/components/DownloadBrochure';
 
 interface PropertyOverviewProps {
   propertyId: string;
@@ -205,6 +206,11 @@ export function PropertyOverview({ propertyId }: PropertyOverviewProps) {
           <Heart className="h-4 w-4 mr-2" />
           Save
         </Button>
+        
+        <DownloadBrochure 
+          brochure={property.brochure} 
+          propertyTitle={property.title}
+        />
         
         <Button className="gradient-gold hover:opacity-90 text-white shadow-gold transition-premium ml-auto">
           <MessageCircle className="h-4 w-4 mr-2" />
