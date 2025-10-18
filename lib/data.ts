@@ -126,10 +126,10 @@ export const properties: Property[] = [
       }
     ],
     images: [
-      '/SATTVA HAMLET/1BHK.jpg',
-      '/SATTVA HAMLET/2-bhk.jpg',
-      '/SATTVA HAMLET/3-bhk.jpg',
-      '/SATTVA HAMLET/4-bhk.jpg'
+      '/SATTVAHAMLET/Club-Elevation_fold-3-opt.webp',
+      '/SATTVAHAMLET/Guest-Bedroom.webp',
+      '/SATTVAHAMLET/fold-1-3.webp',
+      '/SATTVAHAMLET/fold-1-4.webp',
     ],
     brochure: {
       pdf: '/SATTVA HAMLET/HAMLET_BROCHURE.pdf',
@@ -166,10 +166,11 @@ export const properties: Property[] = [
     possessionDate: 'Mar, 2027',
     reraId: 'PRM/KA/RERA/1251/30/PR/220815/000235',
     images: [
-      '/SATTVA SIMPLICITY/Simplicity Masterplan.webp',
-      '/SATTVA SIMPLICITY/Simplicity Masterplan.webp',
-      '/SATTVA SIMPLICITY/Simplicity Masterplan.webp',
-      '/SATTVA SIMPLICITY/Simplicity Masterplan.webp'
+      '/ SATTVASIMPLICITY/main-banner-1.webp',
+      '/ SATTVASIMPLICITY/Bedroom_f1-1.webp',
+      '/ SATTVASIMPLICITY/Living_f1-1.webp',
+      '/ SATTVASIMPLICITY/Plaza_f1.webp',
+      '/ SATTVASIMPLICITY/River-view.0400_f1-1.webp'
     ],
     brochure: {
       pdf: '/SATTVA SIMPLICITY/Simplicity_big_brochure_30x30_24725.pdf',
@@ -207,7 +208,10 @@ export const properties: Property[] = [
     possessionDate: 'Feb, 2027',
     reraId: 'PRM/KA/RERA/1251/30/PR/220815/000236',
     images: [
-      '/SATTVA HAMLET/1BHK.jpg'
+      '/SATTVAPARKCUBIX II/Updated-View-Gold-LEaf_f1.webp',
+      '/SATTVAPARKCUBIX II/Aerial_f1.webp',
+      '/SATTVAPARKCUBIX II/Commercial-View_f1.webp',
+      '/SATTVAPARKCUBIX II/Swimming-Pool-Night-View_edited.webp'
     ],
     brochure: {
       pdf: '/SATTVA PARK CUBIX II/CUBIX.pdf',
@@ -245,7 +249,10 @@ export const properties: Property[] = [
     possessionDate: 'Apr, 2027',
     reraId: 'PRM/KA/RERA/1251/30/PR/220815/000237',
     images: [
-      '/SATTVA HAMLET/2-bhk.jpg'
+      '/sattva-songbird/banner-songbird.webp',
+      '/sattva-songbird/Badminton-Court_WM.webp',
+      '/sattva-songbird/outdoor-patio-with-table-chair-songbird.webp',
+      '/sattva-songbird/row1.webp'
     ],
     brochure: {
       pdf: '/SATTVA SONGBIRD/SONGBIRD_BROCHURE.pdf',
@@ -282,10 +289,11 @@ export const properties: Property[] = [
     possessionDate: 'May, 2027',
     reraId: 'PRM/KA/RERA/1251/30/PR/220815/000238',
     images: [
-      '/SATTVA LUMINA/MasterPlan-1.jpg',
-      '/SATTVA LUMINA/WhatsApp Image 2025-09-28 at 15.35.16.jpeg',
-      '/SATTVA LUMINA/Floor plan - 2bhk & 1bhk.jpg',
-      '/SATTVA LUMINA/floorplan 3bhk 3t 2t.jpg'
+      '/SATTVA LUMINA/banner-3.webp',
+      '/SATTVA LUMINA/Balcony-Cam_WM.webp',
+      '/SATTVA LUMINA/Cafe-_WM-1.webp',
+      '/SATTVA LUMINA/club.webp',
+      '/SATTVA LUMINA/Clubhouse-Terrace_Cam_WM.webp'
     ],
     brochure: {
       pdf: '/SATTVA LUMINA/lumina brochure.pdf',
