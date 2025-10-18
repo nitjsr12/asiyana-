@@ -71,36 +71,36 @@ export function Services() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-white via-blue-50/20 to-purple-50/20 relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-brand-cream to-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 right-20 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl"></div>
-        <div className="absolute bottom-10 left-20 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div className="absolute top-10 right-20 w-96 h-96 bg-brand-gold rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div className="absolute bottom-10 left-20 w-96 h-96 bg-brand-dark rounded-full mix-blend-multiply filter blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 ref={titleRef} className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-text-primary via-brand-dark to-brand-gold bg-clip-text text-transparent">
               Our Services
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-brand-text-secondary max-w-3xl mx-auto leading-relaxed">
             Comprehensive real estate services tailored to meet all your property needs
           </p>
         </div>
 
-        <div ref={servicesRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div ref={servicesRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center max-w-5xl mx-auto">
           {services.map((service, index) => (
             <div 
               key={index}
-              className="text-center group hover:transform hover:scale-105 transition-all duration-500 bg-white/80 backdrop-blur rounded-2xl p-8 shadow-lg hover:shadow-2xl border border-white/50"
+              className="text-center group hover:transform hover:scale-105 transition-all duration-500 bg-white/80 backdrop-blur rounded-2xl p-8 shadow-premium hover:shadow-xl border border-brand-cream w-full max-w-sm"
             >
-              <div className="bg-gradient-to-br from-blue-100 to-purple-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300 shadow-lg">
-                <service.icon className="h-10 w-10 text-blue-600 group-hover:text-white transition-colors duration-300" />
+              <div className="bg-gradient-to-br from-brand-cream to-brand-gold/20 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-brand-gold group-hover:to-brand-dark transition-all duration-300 shadow-gold">
+                <service.icon className="h-10 w-10 text-brand-gold group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">{service.title}</h3>
-              <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors">{service.description}</p>
+              <h3 className="text-xl font-semibold text-brand-text-primary mb-4 group-hover:text-brand-gold transition-colors">{service.title}</h3>
+              <p className="text-brand-text-secondary leading-relaxed group-hover:text-brand-text-primary transition-colors">{service.description}</p>
             </div>
           ))}
         </div>

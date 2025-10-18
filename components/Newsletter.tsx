@@ -17,14 +17,14 @@ export function Newsletter() {
   };
 
   return (
-    <section className="py-20 bg-blue-600">
+    <section className="py-20 gradient-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-3xl mx-auto">
-          <Mail className="h-12 w-12 text-blue-200 mx-auto mb-6" />
+          <Mail className="h-12 w-12 text-brand-gold mx-auto mb-6" />
           <h2 className="text-4xl font-bold text-white mb-4">
             Stay Updated with Market Trends
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-gray-300 mb-8">
             Subscribe to our newsletter for the latest property listings, market insights, and exclusive deals
           </p>
 
@@ -40,11 +40,11 @@ export function Newsletter() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="flex-1 h-12 text-gray-900"
+                className="flex-1 h-12 text-brand-text-primary border-brand-gold focus:border-brand-gold"
               />
               <Button 
                 type="submit"
-                className="bg-white text-blue-600 hover:bg-gray-100 h-12 px-8 font-semibold"
+                className="gradient-gold hover:opacity-90 text-white h-12 px-8 font-semibold shadow-gold"
               >
                 Subscribe
               </Button>

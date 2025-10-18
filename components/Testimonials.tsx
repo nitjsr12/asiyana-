@@ -6,11 +6,11 @@ import Image from 'next/image';
 
 export function Testimonials() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-br from-brand-cream to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-brand-text-primary mb-4">What Our Clients Say</h2>
+          <p className="text-xl text-brand-text-secondary max-w-3xl mx-auto">
             Don't just take our word for it - hear from our satisfied clients
           </p>
         </div>
@@ -19,17 +19,17 @@ export function Testimonials() {
           {testimonials.map((testimonial) => (
             <div 
               key={testimonial.id}
-              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-xl p-8 shadow-premium hover:shadow-xl transition-shadow duration-300 border border-brand-cream"
             >
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  <Star key={i} className="h-5 w-5 text-brand-gold fill-current" />
                 ))}
               </div>
 
-              <Quote className="h-8 w-8 text-blue-600 mb-4" />
+              <Quote className="h-8 w-8 text-brand-gold mb-4" />
               
-              <p className="text-gray-600 mb-6 italic leading-relaxed">
+              <p className="text-brand-text-secondary mb-6 italic leading-relaxed">
                 "{testimonial.content}"
               </p>
 
@@ -39,13 +39,13 @@ export function Testimonials() {
                     src={testimonial.image}
                     alt={testimonial.name}
                     fill
-                    className="rounded-full object-cover"
+                    className="rounded-full object-cover border-2 border-brand-gold"
                     sizes="48px"
                   />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  <h4 className="font-semibold text-brand-text-primary">{testimonial.name}</h4>
+                  <p className="text-sm text-brand-text-secondary">{testimonial.role}</p>
                 </div>
               </div>
             </div>

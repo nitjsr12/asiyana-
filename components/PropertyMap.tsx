@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
-import { properties } from '@/lib/data';
+import { properties, Property } from '@/lib/data';
 import { MapPin, Loader } from 'lucide-react';
 
 // Dynamically import map components to avoid SSR issues
@@ -26,7 +26,12 @@ const Popup = dynamic(
   { ssr: false }
 );
 
-export function PropertyMap() {
+interface PropertyMapProps {
+  properties?: Property[];
+  height?: string;
+}
+
+export function PropertyMap({ properties: props = properties, height = '400px' }: PropertyMapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -60,15 +65,18 @@ export function PropertyMap() {
   const bangaloreCenter: [number, number] = [12.9716, 77.5946];
 
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden h-full min-h-[600px]">
-      <div className="p-4 border-b bg-gradient-to-r from-blue-50 to-indigo-50">
-        <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-          <MapPin className="h-5 w-5 mr-2 text-blue-600" />
+    <div className="bg-white rounded-xl shadow-premium overflow-hidden">
+      <div className="p-4 border-b bg-gradient-to-r from-brand-cream to-white">
+        <h3 className="text-lg font-semibold text-brand-text-primary flex items-center">
+          <MapPin className="h-5 w-5 mr-2 text-brand-gold" />
           Property Locations in Bangalore
         </h3>
+        <p className="text-sm text-brand-text-secondary mt-1">
+          {props.filter(p => p.coordinates).length} properties with location data
+        </p>
       </div>
       
-      <div ref={mapRef} className="h-full relative">
+      <div ref={mapRef} className="relative" style={{ height }}>
         <MapContainer
           center={bangaloreCenter}
           zoom={11}
@@ -80,7 +88,7 @@ export function PropertyMap() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           
-          {properties.filter(property => property.coordinates).map((property) => (
+          {props.filter(property => property.coordinates).map((property) => (
             <Marker
               key={property.id}
               position={[property.coordinates!.lat, property.coordinates!.lng]}

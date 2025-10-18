@@ -131,7 +131,7 @@ export function AuthorizedPartners() {
           {/* KNS Candril Partner */}
           <div className="bg-white rounded-xl shadow-premium p-8 border border-brand-gray-100 hover:shadow-gold transition-all duration-300 group">
             <div className="flex items-start space-x-4 mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-brand-dark to-brand-dark-light rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                 <Building2 className="h-8 w-8 text-white" />
               </div>
               <div className="flex-1">
@@ -163,16 +163,16 @@ export function AuthorizedPartners() {
               
               <div className="pt-4 border-t border-brand-gray-100">
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                  <span className="px-3 py-1 bg-brand-cream text-brand-text-primary text-xs font-medium rounded-full">
                     Quality Construction
                   </span>
-                  <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                  <span className="px-3 py-1 bg-brand-cream text-brand-text-primary text-xs font-medium rounded-full">
                     Timely Delivery
                   </span>
-                  <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                  <span className="px-3 py-1 bg-brand-cream text-brand-text-primary text-xs font-medium rounded-full">
                     Modern Amenities
                   </span>
-                  <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                  <span className="px-3 py-1 bg-brand-cream text-brand-text-primary text-xs font-medium rounded-full">
                     Strategic Locations
                   </span>
                 </div>
@@ -182,29 +182,29 @@ export function AuthorizedPartners() {
         </div>
 
         {/* Trust Indicators */}
-        <div className="bg-gradient-dark text-white rounded-xl p-8 text-center shadow-premium">
-          <h3 className="text-2xl font-bold mb-4">Why Choose Our Authorized Partnership?</h3>
+        <div className="bg-gradient-dark rounded-xl p-8 text-center shadow-premium">
+          <h3 className="text-2xl font-bold mb-4 text-brand-gold">Why Choose Our Authorized Partnership?</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center mb-3">
                 <Shield className="h-6 w-6 text-white" />
               </div>
-              <h4 className="font-semibold mb-2">Authentic Properties</h4>
-              <p className="text-gray-300 text-sm">Direct access to genuine projects with official documentation</p>
+              <h4 className="font-semibold mb-2 text-brand-text-primary">Authentic Properties</h4>
+              <p className="text-brand-text-secondary text-sm leading-relaxed">Direct access to genuine projects with official documentation</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center mb-3">
-                <Award className="h-6 w-6 text-white" />
+                <Award className="h-6 w-6 text-brand-text-secondary" />
               </div>
-              <h4 className="font-semibold mb-2">Best Prices</h4>
-              <p className="text-gray-300 text-sm">Exclusive pricing and offers available only through authorized partners</p>
+              <h4 className="font-semibold mb-2 text-brand-text-primary">Best Prices</h4>
+              <p className="text-brand-text-secondary-300 text-sm leading-relaxed">Exclusive pricing and offers available only through authorized partners</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center mb-3">
-                <Star className="h-6 w-6 text-white" />
+                <Star className="h-6 w-6 text-brand-text-secondary" />
               </div>
-              <h4 className="font-semibold mb-2">Priority Support</h4>
-              <p className="text-gray-300 text-sm">Dedicated support team for seamless property transactions</p>
+              <h4 className="font-semibold mb-2 text-brand-text-primary">Priority Support</h4>
+              <p className="text-brand-text-secondary text-sm leading-relaxed">Dedicated support team for seamless property transactions</p>
             </div>
           </div>
         </div>

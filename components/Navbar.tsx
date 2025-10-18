@@ -45,6 +45,13 @@ export function Navbar() {
     { name: 'Contact', href: '/contact' },
   ];
 
+  const handleWhatsAppClick = () => {
+    const phoneNumber = '+918892534459';
+    const message = 'Hello! I am interested in your properties. Can you help me with more information?';
+    const whatsappUrl = `https://wa.me/${phoneNumber.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <nav className={`fixed top-0 w-full z-50 transition-premium ${
       scrolled ? 'bg-white/98 backdrop-blur-md shadow-premium border-b border-brand-gray-100' : 'bg-white/95 backdrop-blur-sm'
@@ -81,7 +88,10 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Button className="gradient-gold hover:opacity-90 text-white font-semibold px-4 xl:px-6 py-2 text-sm xl:text-base rounded-xl shadow-gold hover:shadow-lg transition-premium hover:scale-105">
+            <Button 
+              onClick={handleWhatsAppClick}
+              className="gradient-gold hover:opacity-90 text-white font-semibold px-4 xl:px-6 py-2 text-sm xl:text-base rounded-xl shadow-gold hover:shadow-lg transition-premium hover:scale-105"
+            >
               Get Started
             </Button>
           </div>
@@ -133,7 +143,13 @@ export function Navbar() {
               </Link>
             ))}
             <div className="px-4 py-2 pt-4">
-              <Button className="w-full gradient-gold hover:opacity-90 text-white font-semibold py-3 rounded-xl shadow-gold hover:shadow-lg transition-premium">
+              <Button 
+                onClick={() => {
+                  handleWhatsAppClick();
+                  setIsOpen(false); // Close mobile menu after clicking
+                }}
+                className="w-full gradient-gold hover:opacity-90 text-white font-semibold py-3 rounded-xl shadow-gold hover:shadow-lg transition-premium"
+              >
                 Get Started
               </Button>
             </div>

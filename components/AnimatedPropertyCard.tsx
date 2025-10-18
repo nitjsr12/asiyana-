@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Property } from '@/lib/data';
-import { Bed, Bath, Square, MapPin, Heart, Eye, Share2 } from 'lucide-react';
+import { Bed, Bath, Square, MapPin, Heart, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -88,107 +88,113 @@ export function AnimatedPropertyCard({ property, index }: AnimatedPropertyCardPr
   }, [index]);
 
   const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR',
-      maximumFractionDigits: 0,
-    }).format(price);
+    if (price >= 10000000) {
+      return `₹${(price / 10000000).toFixed(1)} Cr`;
+    } else if (price >= 100000) {
+      return `₹${(price / 100000).toFixed(1)} L`;
+    } else {
+      return new Intl.NumberFormat('en-IN', {
+        style: 'currency',
+        currency: 'INR',
+        maximumFractionDigits: 0,
+      }).format(price);
+    }
   };
+
+  const formatPricePerSqft = (price: number, sqft: number) => {
+    const pricePerSqft = Math.round(price / sqft);
+    return `₹${pricePerSqft.toLocaleString()}`;
+  };
+
+  // Generate random rating between 4.5 and 5.0
+  const rating = (4.5 + Math.random() * 0.5).toFixed(2);
+  const reviewCount = Math.floor(Math.random() * 100) + 20;
 
   return (
     <div 
       ref={cardRef}
-      className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 group border border-gray-100"
+      className="bg-white rounded-xl shadow-premium overflow-hidden hover:shadow-xl transition-premium group"
     >
-      <div className="relative overflow-hidden">
+      <div className="relative">
         <div ref={imageRef} className="relative h-64 overflow-hidden">
           <Image
             src={property.images[0]}
             alt={property.title}
             fill
-            className="object-cover transition-transform duration-700"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-          
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
-        
-        {/* Status badge */}
-        <div className="absolute top-4 left-4">
+        <div className="absolute top-4 left-4 flex flex-col gap-2">
           <Badge className={`${
-            property.status === 'for-sale' ? 'bg-gradient-to-r from-green-500 to-emerald-500' : 
-            property.status === 'for-rent' ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-gradient-to-r from-gray-500 to-slate-500'
-          } text-white border-0 shadow-lg`}>
+            property.status === 'for-sale' ? 'gradient-gold' : 
+            property.status === 'for-rent' ? 'bg-brand-dark' : 'bg-brand-text-secondary'
+          } text-white shadow-gold`}>
             {property.status === 'for-sale' ? 'For Sale' : 
              property.status === 'for-rent' ? 'For Rent' : 'Sold'}
           </Badge>
+          <Badge className={`${
+            property.constructionStatus === 'under-construction' ? 'bg-orange-500' : 'bg-green-500'
+          } text-white shadow-gold`}>
+            {property.constructionStatus === 'under-construction' ? 'Under Construction' : 'Ready to Move-In'}
+          </Badge>
         </div>
-
-        {/* Action buttons */}
-        <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <Button
-            size="sm"
-            variant="ghost"
-            className="bg-white/90 backdrop-blur hover:bg-white text-gray-700 rounded-full w-10 h-10 p-0"
-          >
-            <Heart className="h-4 w-4" />
-          </Button>
-          <Button
-            size="sm"
-            variant="ghost"
-            className="bg-white/90 backdrop-blur hover:bg-white text-gray-700 rounded-full w-10 h-10 p-0"
-          >
-            <Share2 className="h-4 w-4" />
-          </Button>
-        </div>
-
-        {/* Quick view button */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <Button className="bg-white/90 backdrop-blur text-gray-900 hover:bg-white rounded-full px-6 py-3 font-semibold">
-            <Eye className="h-4 w-4 mr-2" />
-            Quick View
-          </Button>
-        </div>
+        <Button
+          size="sm"
+          variant="ghost"
+          className="absolute top-4 right-4 bg-white bg-opacity-80 hover:bg-opacity-100 text-brand-text-primary hover:text-brand-gold transition-premium"
+        >
+          <Heart className="h-4 w-4" />
+        </Button>
       </div>
 
       <div ref={contentRef} className="p-6">
-        <div className="mb-3">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
-            {formatPrice(property.price)}
-          </div>
-          <div className="flex items-center text-gray-600 text-sm">
-            <MapPin className="h-4 w-4 mr-1 text-blue-500" />
-            {property.location}
-          </div>
-        </div>
-
-        <h3 className="text-lg font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors line-clamp-2">
-          {property.title}
-        </h3>
-
-        <div className="flex items-center justify-between text-gray-600 text-sm mb-6">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center bg-gray-50 rounded-lg px-3 py-1">
-              <Bed className="h-4 w-4 mr-1 text-blue-500" />
-              <span className="font-medium">{property.bedrooms}</span>
-            </div>
-            <div className="flex items-center bg-gray-50 rounded-lg px-3 py-1">
-              <Bath className="h-4 w-4 mr-1 text-blue-500" />
-              <span className="font-medium">{property.bathrooms}</span>
-            </div>
-            <div className="flex items-center bg-gray-50 rounded-lg px-3 py-1">
-              <Square className="h-4 w-4 mr-1 text-blue-500" />
-              <span className="font-medium">{property.sqft.toLocaleString()}</span>
-            </div>
+        {/* Property Name with Rating */}
+        <div className="flex items-start justify-between mb-2">
+          <h3 className="text-lg font-bold text-brand-text-primary group-hover:text-brand-gold transition-premium leading-tight">
+            {property.title}
+          </h3>
+          <div className="flex items-center ml-2">
+            <Star className="h-4 w-4 fill-black text-black" />
+            <span className="text-sm font-semibold text-brand-text-primary ml-1">{rating}</span>
+            <span className="text-sm text-brand-text-secondary ml-1">({reviewCount})</span>
           </div>
         </div>
 
-        <Link href={`/properties/${property.id}`}>
-          <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl py-3 font-semibold transition-all duration-300 transform hover:scale-105">
-            View Details
-          </Button>
-        </Link>
+        {/* Location */}
+        <div className="flex items-center text-brand-text-secondary text-sm mb-3">
+          <MapPin className="h-4 w-4 mr-1" />
+          {property.location}
+        </div>
+
+        {/* Starting Price */}
+        <div className="text-lg font-semibold text-brand-text-primary mb-4">
+          Price starts from {formatPrice(property.price)}
+        </div>
+
+        {/* Bottom Row: Price per sqft with status and Configurations */}
+        <div className="flex items-center justify-between text-sm">
+          <div className="flex items-center">
+            <span className="font-semibold text-brand-text-primary underline">
+              {formatPricePerSqft(property.price, property.sqft)} /sqft - {property.constructionStatus === 'under-construction' ? 'Under Construction' : 'Ready to Move'}
+            </span>
+          </div>
+          <div className="flex items-center">
+            <span className="text-brand-text-secondary">•</span>
+            <span className="text-brand-text-primary ml-1 font-medium">
+              {property.configurations?.split(',').map(config => config.trim()).slice(0, 3).join(', ') || `${property.bedrooms === 0 ? 'Studio' : property.bedrooms} BHK`}
+            </span>
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="mt-6 space-y-2">
+          <Link href={`/properties/${property.id}`}>
+            <Button className="w-full gradient-gold hover:opacity-90 text-white shadow-gold transition-premium">
+              View Details
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

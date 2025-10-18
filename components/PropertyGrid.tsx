@@ -1,14 +1,18 @@
 'use client';
 
-import { properties } from '@/lib/data';
+import { properties, Property } from '@/lib/data';
 import { PropertyCard } from '@/components/PropertyCard';
 
-export function PropertyGrid() {
+interface PropertyGridProps {
+  properties?: Property[];
+}
+
+export function PropertyGrid({ properties: props = properties }: PropertyGridProps) {
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <p className="text-gray-600">Showing {properties.length} properties</p>
-        <select className="border border-gray-300 rounded-lg px-4 py-2 text-gray-700">
+        <p className="text-brand-text-secondary">Showing {props.length} properties</p>
+        <select className="border border-brand-gray-100 rounded-lg px-4 py-2 text-brand-text-primary focus:border-brand-gold transition-premium">
           <option>Sort by: Price (Low to High)</option>
           <option>Sort by: Price (High to Low)</option>
           <option>Sort by: Newest</option>
@@ -17,7 +21,7 @@ export function PropertyGrid() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {properties.map((property) => (
+        {props.map((property) => (
           <PropertyCard key={property.id} property={property} />
         ))}
       </div>

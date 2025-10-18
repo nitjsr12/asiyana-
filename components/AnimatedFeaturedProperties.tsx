@@ -80,28 +80,28 @@ export function AnimatedFeaturedProperties() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/30 relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-br from-brand-cream to-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-brand-gold rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-brand-dark rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-brand-gold rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">
-            <Sparkles className="h-8 w-8 text-blue-600 mr-2" />
-            <span className="text-blue-600 font-semibold text-lg">Premium Collection</span>
+            <Sparkles className="h-8 w-8 text-brand-gold mr-2" />
+            <span className="text-brand-gold font-semibold text-lg">Premium Collection</span>
           </div>
           
           <h2 ref={titleRef} className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-text-primary via-brand-dark to-brand-gold bg-clip-text text-transparent">
               Featured Properties
             </span>
           </h2>
           
-          <p ref={subtitleRef} className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p ref={subtitleRef} className="text-xl text-brand-text-secondary max-w-3xl mx-auto leading-relaxed">
             Discover our handpicked selection of premium properties in Bangalore's most prestigious locations
           </p>
         </div>
@@ -114,7 +114,7 @@ export function AnimatedFeaturedProperties() {
 
         <div ref={buttonRef} className="text-center">
           <Link href="/properties">
-            <Button className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white px-12 py-4 text-lg rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group">
+            <Button className="gradient-gold hover:opacity-90 text-white px-12 py-4 text-lg rounded-2xl shadow-gold hover:shadow-xl transition-all duration-300 transform hover:scale-105 group">
               <span className="mr-3">Explore All Properties</span>
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
